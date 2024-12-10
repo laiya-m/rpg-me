@@ -1,28 +1,46 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>RPG Character Builder</title>
-  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Import Styles -->
+  <link rel="stylesheet" href="styles.css" />
+  
+  <!-- Import WiredJS Elements -->
   <script type="module" src="https://cdn.jsdelivr.net/npm/wired-elements/dist/wired-elements.bundled.js"></script>
-  <script type="module" src="script.js" defer></script>
+  
+  <!-- Import RPG Character Component -->
+  <script type="module" src="rpg-character.js"></script>
+  
+  <!-- Import RPG Character Controls -->
+  <script type="module" src="rpg-me.js" defer></script>
 </head>
 <body>
   <div id="app">
+    <!-- Character Display -->
     <div id="character-container">
-      <rpg-character id="character" seed="default"></rpg-character>
+      <rpg-character id="character" seed="default" height="300" width="300"></rpg-character>
     </div>
+
+    <!-- Controls Section -->
     <div id="controls-container">
-      <h2>Customize Character</h2>
+      <h2>Create Your Character!</h2>
+      
+      <!-- Accessories Input -->
       <label>
         Accessories:
         <wired-input id="accessories" type="number" placeholder="0-9" min="0" max="9"></wired-input>
       </label>
+
+      <!-- Base Input -->
       <label>
         Base:
         <wired-input id="base" type="number" placeholder="0-1" min="0" max="1"></wired-input>
       </label>
+
+      <!-- Hat Selector -->
       <label>
         Hat:
         <wired-combo id="hat">
@@ -31,12 +49,37 @@
           <wired-item value="cowboy">Cowboy</wired-item>
         </wired-combo>
       </label>
-      <wired-button id="update-button">Update Character</wired-button>
+
+      <!-- Fire Checkbox -->
+      <label>
+        Fire:
+        <wired-checkbox id="fire"></wired-checkbox>
+      </label>
+
+      <!-- Walking Checkbox -->
+      <label>
+        Walking:
+        <wired-checkbox id="walking"></wired-checkbox>
+      </label>
+
+      <!-- Circle Checkbox -->
+      <label>
+        Circle:
+        <wired-checkbox id="circle"></wired-checkbox>
+      </label>
+
+      <!-- Character Name Input -->
+      <label>
+        Character Name:
+        <wired-input id="character-name" placeholder="Enter name"></wired-input>
+      </label>
+
+      <!-- Set Name Button -->
+      <wired-button id="submit-name">Set Name</wired-button>
+
+      <!-- Share Link Button -->
+      <wired-button id="update-button">Generate Share Link</wired-button>
     </div>
   </div>
 </body>
-<div id="character-container">
-  <rpg-character id="character" seed="default"></rpg-me>
-</div>
-
 </html>
