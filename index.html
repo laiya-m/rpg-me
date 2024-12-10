@@ -5,16 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>RPG Character Builder</title>
   
-  <!-- Import Styles -->
   <link rel="stylesheet" href="styles.css" />
   
-  <!-- Import WiredJS Elements -->
   <script type="module" src="https://cdn.jsdelivr.net/npm/wired-elements/dist/wired-elements.bundled.js"></script>
   
-  <!-- Import RPG Character Component -->
   <script type="module" src="rpg-character.js"></script>
   
-  <!-- Import RPG Character Controls -->
   <script type="module" src="rpg-me.js" defer></script>
 </head>
 <body>
@@ -50,31 +46,26 @@
         </wired-combo>
       </label>
 
-      <!-- Fire Checkbox -->
       <label>
         Fire:
         <wired-checkbox id="fire"></wired-checkbox>
       </label>
 
-      <!-- Walking Checkbox -->
       <label>
         Walking:
         <wired-checkbox id="walking"></wired-checkbox>
       </label>
 
-      <!-- Circle Checkbox -->
       <label>
         Circle:
         <wired-checkbox id="circle"></wired-checkbox>
       </label>
 
-      <!-- Character Name Input -->
       <label>
         Character Name:
         <wired-input id="character-name" placeholder="Enter name"></wired-input>
       </label>
 
-      <!-- Set Name Button -->
       <wired-button id="submit-name">Set Name</wired-button>
 
       <!-- Share Link Button -->
